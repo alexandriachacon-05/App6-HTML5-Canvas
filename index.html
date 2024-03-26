@@ -51,7 +51,7 @@ function drawRect() { //This draws a rectangle on the canvas
 function my_name() {//this function displays my name, "Alexandria"
 	var a_canvas = document.getElementById('a'); //this variable calls the canvas using an id
 	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
-	a_context.font = "times-new-roman"; // adds font for my name
+	a_context.font = "30px Times New Roman"; // adds font for my name and size
 	a_context.fillStyle = "#000000"; // sets color of text to black
 	a_context.fillText ("Alexandria", 10, 150); //adds name text and coordinates for my name
 }; 
@@ -59,8 +59,8 @@ function my_name() {//this function displays my name, "Alexandria"
 function my_image() {//this function displays my chosen image
 	var a_canvas =document.getElementById('a'); //this variable calls the canvas using an id
 	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
-	var pandaimg = document.getElementById('panda');//pulls panda image
-	a_context.drawImage(pandaimg, 50, 100, 150, 200);/draws image with size created by 4 numbers
+	var pandaimg = document.getElementById('pandaimg');//pulls panda image
+	a_context.drawImage(pandaimg, 100, 100, 50, 50);//draws image with size created by 4 numbers
 
 };
 	
@@ -108,7 +108,10 @@ function my_image() {//this function displays my chosen image
 	
 	<a onclick="my_name();" class="w3-btn w3-light-blue w3-round"> Write name!</a> <!--This creates a light blue button that's very excited to write my name!-->
 	
-	<a onclick="my_image();" class='w3-btn w3-light-purple w3-round"> Draw image!</a> <!--This creates a light purple button that calls the image function and draws the cute panda image-->
+
+	<a onclick="my_image();" class="w3-btn w3-purple w3-round"> Draw image!</a> <!--This creates a light purple button that calls the image function and draws the cute panda image-->
+
+	<img id='pandaimg' src='https://shinobi-stickers.com/cdn/shop/products/Adorable_Cute_Chubby_Kawaii_Panda_Bear_Cartoon_1_638272692_1200x1200.jpg?v=1499473253' alt='Panda Image' class='hidden'>
 
 
 <footer class="w3-bottom w3-container w3-pink">
