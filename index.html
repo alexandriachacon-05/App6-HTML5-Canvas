@@ -42,8 +42,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 function drawRect() { //This draws a rectangle on the canvas
 	var a_canvas = document.getElementById('a'); //this variable calls the canvas
-	var a_context = a_canvas.getContext('2d');// sets canvas to 2dimensional
-	a_context.fillRect(5, 5, 150, 100);//sets coordinates and placement of rectangle
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2dimensional
+	a_context.fillRect(5, 100, 150, 200);//sets coordinates and placement of rectangle
 };
 
 
@@ -83,7 +83,7 @@ function drawRect() { //This draws a rectangle on the canvas
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<canvas id="a" width="300" height="225" style="border:2px solid #000000;"></canvas>
+<canvas id="a" width="300" height="225" style="border:2px solid #000000;"></canvas> <!--This adds the canvas to the page-->
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
