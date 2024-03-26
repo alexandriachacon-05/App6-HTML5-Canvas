@@ -60,10 +60,14 @@ function my_image() {//this function displays my chosen image
 	var a_canvas =document.getElementById('a'); //this variable calls the canvas using an id
 	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
 	var pandaimg = document.getElementById('pandaimg');//pulls panda image
-	a_context.drawImage(pandaimg, 100, 100, 50, 50);//draws image with size created by 4 numbers
+	a_context.drawImage(pandaimg, 5, 5, 100, 100);//draws image with size created by 4 numbers
 
 };
-	
+
+function clear_canvas() {//this function clears the canvas
+	var a_canvas =document.getElementById('a');//this variable calls the canvas using an id
+ 	a_canvas.width = a_canvas.width; // causes the canvas to clear
+};	
 
 
 
@@ -90,7 +94,7 @@ function my_image() {//this function displays my chosen image
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
+<div id="header" class="w3-container w3-pink">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
 	
@@ -107,11 +111,12 @@ function my_image() {//this function displays my chosen image
 	<a onclick="drawRect();" class="w3-btn w3-pink w3-round"> Draw Rectangle!</a> <!--This creates a pink (and cute) button that's very excited to draw a rectangle on the canvas!-->
 	
 	<a onclick="my_name();" class="w3-btn w3-light-blue w3-round"> Write name!</a> <!--This creates a light blue button that's very excited to write my name!-->
-	
 
-	<a onclick="my_image();" class="w3-btn w3-purple w3-round"> Draw image!</a> <!--This creates a light purple button that calls the image function and draws the cute panda image-->
+	<img id='pandaimg' src='https://cdn.pixabay.com/photo/2022/03/08/18/30/bird-7056310_640.png' alt='Image of Penguin' class='hidden' width='0' height='0'> <!-- Image of penguin is hidden, but needed for function to show image when button clicked-->
 
-	<img id='pandaimg' src='https://shinobi-stickers.com/cdn/shop/products/Adorable_Cute_Chubby_Kawaii_Panda_Bear_Cartoon_1_638272692_1200x1200.jpg?v=1499473253' alt='Panda Image' class='hidden'>
+   	<a onclick="my_image();" class="w3-btn w3-purple w3-round"> Draw image! </a> <!--Creates button that draws the image-->
+
+	<a onclick="clear_canvas();" class="w3-btn w3-pale-green w3-round"> Clear Canvas!</a> <!--Creates button that clears canvas-->
 
 
 <footer class="w3-bottom w3-container w3-pink">
