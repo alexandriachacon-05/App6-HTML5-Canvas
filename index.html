@@ -41,13 +41,21 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function drawRect() { //This draws a rectangle on the canvas
-	var a_canvas = document.getElementById('a'); //this variable calls the canvas
-	var a_context = a_canvas.getContext('2d'); //sets canvas to 2dimensional
+	var a_canvas = document.getElementById('a'); //this variable calls the canvas using an id
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
 	a_context.fillStyle = "#FF69B4"; // rectangle is hot pink
 	a_context.fillRect(5, 5, 175, 100);//sets coordinates and placement of rectangle
 
 };
 
+function my_name() {//this function displays my name, "Alexandria"
+	var a_canvas = document.getElementById('a'); //this variable calls the canvas using an id
+	var a_context = a_canvas.getContext('2d'); //sets canvas to 2 dimensional
+	a_context.font = "times-new-roman"; // adds font for my name
+	a_context.fillStyle = #000000"; // sets color of text to black
+	a_context.fillText ("Alexandria");
+};
+	
 
 
 
@@ -87,7 +95,10 @@ function drawRect() { //This draws a rectangle on the canvas
 
 <canvas id="a" width="300" height="225" style="border:2px solid #000000;"></canvas> <!--This adds the canvas to the page-->
 <p> Click the buttons below to create a work of art! </p> <!-- This acts as both an instructional and a space between the rectangle and buttons-->
+
 	<a onclick="drawRect();" class="w3-btn w3-pink w3-round"> Draw Rectangle!</a> <!--This creates a pink (and cute) 		button that's very excited to draw a rectangle on the canvas!-->
+	
+	<a onclick="my_name();" class="w3-btn w3-london w3-round"> Write name!</a> <!--This creates a light pink (and cute) 		button that's very excited to write my name!-->
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
